@@ -1,0 +1,42 @@
+<div id="my-todo-editor">
+
+  <form #todoForm="ngForm">
+
+    <div class="form-group">
+      <label for="my-todo-text" class="control-label">
+        Task
+      </label>
+
+      <input type="text"
+        name="todoTask"
+        id="my-todo-text"
+        class="form-control"
+        [(ngModel)]="todo.task"
+      >
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"
+          name="todoFlagged"
+          id="my-todo-flagged"
+          [(ngModel)]="todo.flagged"
+        >
+        Flagged
+        <span class="glyphicon glyphicon-flag"></span>
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"
+          name="todoComplete"
+          id="my-todo-complete"
+          [(ngModel)]="todo.complete"
+        >
+        Complete
+      </label>
+    </div>
+
+  </form>
+</div>

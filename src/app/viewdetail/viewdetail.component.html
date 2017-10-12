@@ -1,0 +1,32 @@
+<h2>View Detail</h2>
+<ul [ngClass] = "'view-detail'">
+<div  *ngFor="let user of singleTodo"
+(click)="active = user">
+<div>
+    ID - {{ user.id || '&nbsp;'}}
+</div>
+<div>
+User ID - {{ user.userId || '&nbsp;'}}
+ </div>
+<div>
+  Title - {{ user.title || '&nbsp;'}}
+</div>
+<div>
+   Completed - {{ user.completed || '&nbsp;'}}
+</div>
+</div>
+
+</ul>
+<div>
+
+    <li class="list-group-item list-group-item-success"
+        id="my-new-todo"
+    (click)="createNew()"
+    >
+    <span class="glyphicon glyphicon-plus"></span>
+    Create New
+    </li>
+</div>
+<div>
+ <button (click)="goBack()">Go Back</button>
+</div>
